@@ -1,3 +1,10 @@
+# Everything in project-hub can be ignored, since I will be using custom-projects
+*project-hub/*
+
+*Biology*
+
+custom-projects/paired-feedback-pilot/annotation-output/*
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
