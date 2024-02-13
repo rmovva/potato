@@ -150,7 +150,7 @@
     # to influence the layout and description of your task. This is not a full
     # HTML page, just the piece that does lays out your task's pieces
     #"html_layout": "templates/examples/fixed_keybinding_layout.html",
-    "html_layout": "projects/match_finding_likert/templates/layout.html",
+    # "html_layout": "project-hub/match_finding/templates/layout.html",
 
     # The core UI files for Potato. You should not need to change these normally.
     #
@@ -159,8 +159,8 @@
     # 2) Your layout requires additional JS/assets to render
     # 3) You want to support additional keybinding magic
     #
-    "base_html_template": "templates/base_template.html",
-    "header_file": "templates/header.html",
+    "base_html_template": "default",
+    "header_file": "default",
 
     # This is where the actual HTML files will be generated
     "site_dir": "potato/templates/",

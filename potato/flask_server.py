@@ -1902,20 +1902,25 @@ def get_displayed_text(text):
         # unfolding dict into different sections
         elif isinstance(text, dict):
             block = []
-            if config["list_as_text"].get("horizontal"):
-                for key in text:
-                    block.append(
-                        '<div name="instance_text" style="float:left;width:%s;padding:5px;" class="column"> <legend> %s </legend> %s </div>'
-                        % ("%d" % int(100 / len(text)) + "%", key, text[key])
+            for key in text:
+                if key[-2:] in [' A', ' B']:
+                    width = '6'
+                else:
+                    width = '12'
+                block.append(
+                    """
+                    <div class="col-md-%s">
+                    <div name="card" class="card my-2">
+                            <h5 class="card-header"> %s </h5>
+                            <div class="card-body"> 
+                            <p class="card-text">
+                            %s</p></div>
+                        </div>
+                        </div>
+                        """
+                    % (width,  key, text[key].replace("\n","<br/>"))
                     )
-                text = '<div class="row" style="display: table"> %s </div>' % ("".join(block))
-            else:
-                for key in text:
-                    block.append(
-                        '<div name="instance_text"> <legend> %s </legend> %s <br/> </div>'
-                        % (key, text[key])
-                    )
-                text = "".join(block)
+            text = ' %s ' % ("".join(block))
         else:
             text = text
     return text

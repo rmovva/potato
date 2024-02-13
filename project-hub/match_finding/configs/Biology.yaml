@@ -1,5 +1,5 @@
 {
-    "port": 9001,
+    "port": 8000,
     "server_name": "potato annotator",
     "annotation_task_name": "Match findings (Biology)",
     "output_annotation_dir": "annotation_output/pilot/Biology/",
@@ -20,10 +20,10 @@
         "allow_all_users": true,
         "users": []
     },
-    "login": {
-        "type": "url_direct",
-        "url_argument": "PROLIFIC_PID"
-    },
+    # "login": {
+    #     "type": "url_direct",
+    #     "url_argument": "PROLIFIC_PID"
+    # },
     "jumping_to_id_disabled": false,
     "hide_navbar": true,
     "surveyflow": {
