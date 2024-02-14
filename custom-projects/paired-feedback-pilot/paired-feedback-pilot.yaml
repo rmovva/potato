@@ -23,7 +23,8 @@
     "annotation_codebook_url": "",
 
     "data_files": [
-       "data_files/toy-example.json"
+       # "data_files/toy-example.json"
+       "data_files/pilot_v0_feb13_n=95.jsonl"
     ],
 
     "item_properties": {
@@ -43,6 +44,19 @@
 
       "allow_all_users": True,
       
+      "users": [  ],
+    },
+
+
+    "automatic_assignment": {
+      #whether do automatic task assignment for annotators, default False.
+      "on": True,
+      "output_filename": 'task_assignment.json',
+      "sampling_strategy": 'random',
+      "labels_per_instance": 10,
+      "instance_per_annotator": 30,
+      "test_question_per_annotator": 0, # you must set up the test question in surveyflow to use this function
+
       "users": [  ],
     },
 
@@ -104,5 +118,26 @@
 
     # This is where the actual HTML files will be generated
     "site_dir": "default",
+
+    "surveyflow": {
+        "on": true,
+        "order": [
+            "pre_annotation",
+            # "post_annotation",
+        ],
+        "pre_annotation": [
+            "surveyflow/intro.jsonl", 
+            "surveyflow/consent.jsonl",
+            "surveyflow/instruction.jsonl", 
+        ],
+        # "post_annotation": [
+        #     "surveyflow/demographics.jsonl",
+        #     "surveyflow/study_feedback.jsonl",
+        #     "surveyflow/end.jsonl",
+        # ],
+        # "testing": [
+        #      "surveyflow/testing.jsonl",
+        # ]
+    },
 
 }
