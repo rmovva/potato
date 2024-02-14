@@ -3,7 +3,10 @@
 
 *Biology*
 
-custom-projects/paired-feedback-pilot/annotation-output/*
+*custom-projects/paired-feedback-pilot/annotation_output/*
+*custom-projects/paired-feedback-pilot/user_config.json
+
+*potato/templates/*.html
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

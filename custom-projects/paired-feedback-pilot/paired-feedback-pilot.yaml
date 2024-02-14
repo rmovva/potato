@@ -48,6 +48,28 @@
     },
 
 
+    "surveyflow": {
+        "on": true,
+        "order": [
+            "pre_annotation",
+            "post_annotation",
+        ],
+        "pre_annotation": [
+            "surveyflow/intro.jsonl", 
+            "surveyflow/consent.jsonl",
+            "surveyflow/instruction.jsonl", 
+        ],
+        "post_annotation": [
+            "surveyflow/demographics.jsonl",
+            "surveyflow/study_feedback.jsonl",
+            "surveyflow/end.jsonl",
+        ],
+        # "testing": [
+        #      "surveyflow/testing.jsonl",
+        # ]
+    },
+
+
     "automatic_assignment": {
       #whether do automatic task assignment for annotators, default False.
       "on": True,
@@ -84,7 +106,7 @@
             ],
 
             # adding requirements for labels, when "required" is True, the annotators will be asked to finish the current instance to proceed
-            "label_requirement": {"required":True},
+            "label_requirement": {"required": True},
 
             # If true, numbers [1-len(labels)] will be bound to each
             # label. Aannotations with more than 10 are not supported with this
@@ -118,26 +140,5 @@
 
     # This is where the actual HTML files will be generated
     "site_dir": "default",
-
-    "surveyflow": {
-        "on": true,
-        "order": [
-            "pre_annotation",
-            # "post_annotation",
-        ],
-        "pre_annotation": [
-            "surveyflow/intro.jsonl", 
-            "surveyflow/consent.jsonl",
-            "surveyflow/instruction.jsonl", 
-        ],
-        # "post_annotation": [
-        #     "surveyflow/demographics.jsonl",
-        #     "surveyflow/study_feedback.jsonl",
-        #     "surveyflow/end.jsonl",
-        # ],
-        # "testing": [
-        #      "surveyflow/testing.jsonl",
-        # ]
-    },
 
 }
