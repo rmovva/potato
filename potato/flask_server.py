@@ -1907,6 +1907,10 @@ def get_displayed_text(text):
                     width = '6'
                 else:
                     width = '12'
+                # Replace \n with <br/>
+                parsed_text = text[key].replace("\n","<br/>")
+                # Replace text wrapped in **{text}** with <strong>{text}</strong>
+                parsed_text = re.sub(r"\*\*(.*?)\*\*", r"<strong>\1</strong>", parsed_text)
                 block.append(
                     """
                     <div class="col-md-%s">
@@ -1918,7 +1922,7 @@ def get_displayed_text(text):
                         </div>
                         </div>
                         """
-                    % (width,  key, text[key].replace("\n","<br/>"))
+                    % (width,  key, parsed_text)
                     )
             text = ' %s ' % ("".join(block))
         else:
