@@ -1,0 +1,39 @@
+<style>
+table, th, td {
+  border:1px solid black;
+}
+td {
+  text-align: center;
+}
+.tooltip-inner {
+    min-width: 100px;
+    max-width: 500px;
+}
+</style>
+
+<div class="row" style="background-color: white;">
+    
+    {{instance | safe}}
+    
+</div>
+
+<br style="height: 25px;" />
+
+<div class="alert alert-info" role="alert">
+    <strong>In your opinion, which of the two responses to the prompt is better?</strong>  Use your own judgement - how happy would you personally be to receive each of the responses? Select Tie (both good) if you like both responses exactly the same, and select Tie (both bad) if you like neither response. Remember that you are being asked to judge the <strong>responses</strong>, not the prompt.
+  </div>
+
+<div class="row">
+    
+    {{annotation_schematic}}
+    
+</div>
+
+    <div style="height: 15px;" />
+
+  </div>
+  <div class="col-md-12">
+
+  </div>
+</div>
+<div style="text-align:center"> Keyboard Input: {{keybindings}} </div>

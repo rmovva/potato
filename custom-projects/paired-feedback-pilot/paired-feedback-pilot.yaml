@@ -54,13 +54,13 @@
         {
             "annotation_type": "radio",
             "name": "Comparison",
-            "description": "<strong>In your opinion, which of the two responses to the prompt is better?</strong> Select Tie (both good) if you like both responses exactly the same, and select Tie (both bad) if you like neither response.",
+            "description": "Compare the responses.",
 
             # If true, display the labels horizontally
             "horizontal": False,
 
             "labels": [
-               "A is better", "B is better", "Tie (both good)", "Tie (both bad)",
+               "Response A is better", "Response B is better", "Tie (both good)", "Tie (both bad)",
             ],
 
             # adding requirements for labels, when "required" is True, the annotators will be asked to finish the current instance to proceed
@@ -93,7 +93,8 @@
     # if you want to use your own template,
     # please replace the string as a path to the template
     "base_html_template": "default",
-    "header_file": "default",
+    # "header_file": "default",
+    "header_file": "templates/header.html",
 
     # This is where the actual HTML files will be generated
     "site_dir": "default",
