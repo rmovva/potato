@@ -2,5 +2,5 @@
 {"id":"2","text":"What is your current age group?","schema": "radio", "choices": ["18-29", "30-39", "40-49", "50-59", "60-69", "70+"], "label_requirement": {"required":true}}
 {"id":"3","text":"Which race/ethnicity group best describes you?","schema": "radio", "choices": ["White", "Black/African American", "Asian", "Hispanic/Latino", "Multiracial", "Other"], "label_requirement": {"required":true}}
 {"id":"4","text":"What is your education level?","schema": "radio", "choices": ["Less than a high school diploma", "High school diploma or equivalent", "College degree", "Graduate degree", "Other"], "label_requirement": {"required":true}}
-{"id":"5","text":"In which country did you spend most of your time before you turned 18?","schema": "select", "use_predefined_labels": "country", "label_requirement": {"required":true}}
+{"id":"5","text":"Is English your native language?","schema": "radio", "choices": ["Yes", "No"], "label_requirement": {"required":true}}
 {"id":"6","text":"Please feel free to leave any comments about our study (optional)","schema": "text"}

@@ -55,14 +55,15 @@
             "post_annotation",
         ],
         "pre_annotation": [
-            "surveyflow/intro.jsonl", 
-            "surveyflow/consent.jsonl",
-            "surveyflow/instruction.jsonl", 
+            {"file": "surveyflow/intro.jsonl", "text": ""}, 
+            {"file": "surveyflow/instruction.jsonl", "text": ""},
+            {"file": "surveyflow/consent.jsonl", "text": ""}, 
         ],
         "post_annotation": [
-            "surveyflow/demographics.jsonl",
-            "surveyflow/study_feedback.jsonl",
-            "surveyflow/end.jsonl",
+            {"file": "surveyflow/transition.jsonl", "text": ""},
+            {"file": "surveyflow/demographics.jsonl", "text": ""},
+            {"file": "surveyflow/study_feedback.jsonl", "text": ""},
+            {"file": "surveyflow/end.jsonl", "text": ""},
         ],
         # "testing": [
         #      "surveyflow/testing.jsonl",
@@ -124,6 +125,7 @@
     # "html_layout": "default",
     # "html_layout": "templates/match_finding_layout.html",
     "html_layout": "templates/paired_layout.html",
+    "surveyflow_html_layout": "default",
 
     # The core UI files for Potato. You should not need to change these normally.
     #
