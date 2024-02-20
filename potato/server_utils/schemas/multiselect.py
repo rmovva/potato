@@ -27,7 +27,9 @@ def generate_multiselect_layout(annotation_scheme):
 
     n_columns = display_info["num_columns"] if "num_columns" in display_info else 1
 
-    schematic += "<table>"
+    # schematic += "<table>"
+    schematic += "<table style='margin: auto;'>"
+
 
     # setting up label validation for each label, if "required" is True, the annotators will be asked to finish the current instance to proceed
     validation = ""
