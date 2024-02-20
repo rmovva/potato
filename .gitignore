@@ -3,8 +3,8 @@
 
 *Biology*
 
-*custom-projects/paired-feedback-pilot/annotation_output/*
-*custom-projects/paired-feedback-pilot/user_config.json
+*custom-projects/*/annotation_output/*
+*custom-projects/*/user_config.json
 
 *potato/templates/*.html
 
