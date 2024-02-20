@@ -24,7 +24,8 @@
 
     "data_files": [
        # "data_files/toy-example.json"
-       "data_files/pilot_v1_feb16_n=140.jsonl"
+    #    "data_files/pilot_v1_feb16_n=140.jsonl"
+       "data_files/pilot_v2_feb19_n=103.jsonl"
     ],
 
     "item_properties": {
