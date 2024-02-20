@@ -1,0 +1,63 @@
+<style>
+table, th, td {
+  border:1px solid black;
+}
+td {
+  text-align: center;
+}
+.tooltip-inner {
+    min-width: 100px;
+    max-width: 500px;
+}
+</style>
+
+<div class="alert alert-info" role="alert">
+  <p>
+    Below, you will see a <strong>Prompt</strong> that a user sent to an AI chatbot and two possible responses, <strong>Response A</strong> and <strong>Response B</strong>.
+  </p>
+  <p>
+    Read the prompt carefully, and then decide which of the two responses is better. You should judge the responses based on <strong>whatever criteria you think are important.</strong>
+  </p>
+  <p>
+    The user's prompt may be confusing or unclear. In these cases, use your discretion to identify which response would be more appropriate.
+  </p>
+</div>
+
+
+
+<div class="row" style="background-color: white;">
+    
+    {{instance | safe}}
+    
+</div>
+
+<br style="height: 25px;" />
+
+<!-- <div class="alert alert-info" role="alert">
+    <strong>In your opinion, which of the two responses to the prompt is better?</strong> Remember that you are being asked to judge the <strong>responses</strong>, not the prompt.
+</div> -->
+
+<div class="alert alert-warning" role="alert">
+  Please try to pick one of the two responses. Only use the "Tie (both good)" option if you like both responses exactly the same, and only use "Tie (both bad)" if neither response is helpful.
+</div>
+
+<div class="col-md-12">
+  <div class="row">
+    <div class="annotation_schema">
+        {{annotation_schematic}}
+    </div>
+  </div>
+</div>
+
+<div style="height: 15px;" />
+</div>
+
+<!-- <div class="col-md-12">
+    <div style="text-align:center"> Keyboard Input: {{keybindings}} </div>
+</div> -->
+
+<div class="col-md-12" style="text-align:center">
+  <div style="display: inline-block; margin: 0 auto; text-align: center;"> 
+      Keyboard Input: {{keybindings}} 
+  </div>
+</div>
