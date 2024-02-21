@@ -1,1 +1,1 @@
-{"id":"1","text":"Thanks for your time! Return to Prolific and confirm your completion by [clicking this link](https://app.prolific.com/submissions/complete?cc=C23PG0KC).","schema": "pure_display","choices": []}
+{"id":"1","text":"Thanks for your time! Return to Prolific and confirm your completion by <a href=\"https://app.prolific.com/submissions/complete?cc=C23PG0KC\">clicking this link</a>.","schema": "pure_display","choices": []}
