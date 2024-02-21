@@ -4,4 +4,3 @@
 {"id":"4","text":"What is your education level?","schema": "multiselect", "choices": ["Did not complete high school", "Completed high school or equivalent", "Some college, no degree", "Completed college", "Completed or pursuing graduate degree", "Technical or vocational training", "Other"], "label_requirement": {"required":true}}
 {"id":"5","text":"Which category best describes your political views?","schema": "radio", "choices": ["Left/liberal", "Right/conservative", "Center/moderate", "Other"], "label_requirement": {"required":true}}
 {"id":"6","text":"Is English your native language?","schema": "radio", "choices": ["Yes", "No"], "label_requirement": {"required":true}}
-{"id":"7","text":"Please feel free to leave any comments about our study (optional)","schema": "text"}
