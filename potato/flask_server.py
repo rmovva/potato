@@ -1907,6 +1907,23 @@ def get_displayed_text(text):
 
         # unfolding dict into different sections
         elif isinstance(text, dict):
+            #randomize the order of the displayed text
+            if config["list_as_text"].get("randomization") == "value":
+                # Flip a coin, and if 1, then swap 'Response A' and 'Response B'
+                # This is to ensure that annotators see examples in a random order
+                assert 'Response A' in text and 'Response B' in text
+                if random.randint(0, 1) == 1:
+                    new_text = text.copy()
+                    new_text['Response A'] = text['Response B']
+                    new_text['Response B'] = text['Response A']
+                    text = new_text
+            elif config["list_as_text"].get("randomization") == "key":
+                keys = list(text.keys())
+                random.shuffle(keys)
+                text = {key: text[key] for key in keys}
+            else:
+                print("WARNING: %s currently not supported for list_as_text, please check your .yaml file"%config["list_as_text"].get("randomization"))
+
             block = []
             for key in text:
                 if key[-2:] in [' A', ' B']:
